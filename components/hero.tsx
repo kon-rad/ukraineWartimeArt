@@ -1,11 +1,11 @@
-import { Box, Flex, Text, Image } from "@chakra-ui/react";
+import { Box, HStack, Flex, Text, Image } from "@chakra-ui/react";
 
 const Hero = () => {
     return (
-        <Flex>
-            <Flex direction="column" justify="center" mr={18} height="400px">
-                <Text fontSize="4xl">A series of Ukraine wartime art NFT collections</Text>
-                <Text fontSize="md">
+        <HStack width="100%" justify="center">
+            <Flex direction="column" style={{ justifyContent: "space-around" }} mr={18} height="400px">
+                <Text fontSize="4xl" maxWidth="600px">A series of Ukraine wartime art NFT collections</Text>
+                <Text fontSize="md" maxWidth="400px">
                     We aim to raise aid funds for Ukraine with a series of NFT collections from a range of artists. Each collection has a unique story and cause. Become a part of world history by supporting Ukraine in fending off the aggression!
                 </Text>
             </Flex>
@@ -24,7 +24,7 @@ const Hero = () => {
                     />
                 </div>
             </Box>
-        </Flex>
+        </HStack>
     );
 };
 

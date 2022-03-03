@@ -11,7 +11,20 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Web3Provider, ExternalProvider } from "@ethersproject/providers";
 import { AppStateProvider } from "../context/appState";
+import { initializeApp, getApp, getApps } from "firebase/app";
 
+const firebaseConfig = {
+    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+    messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+    measurementId: process.env.NEXT_PUBLIC_MEASUREMENT_ID,
+};
+
+export const app =
+    getApps().length === 0 ? initializeApp(firebaseConfig) : getApp();
+    
 // /* CSS HEX */
 // https://coolors.co/202a25-5f4bb6-86a5d9-26f0f1-c4ebc8
 // --dark-jungle-green: #202a25ff;
@@ -43,6 +56,7 @@ const theme = extendTheme({
       500: "#c4ebc8ff",
       600: "#ea3546", // red
       700: "#D6E3F8", // periwinkle crayola
+      800: "#ffd500", // ukraine yellow
     },
   },
 });

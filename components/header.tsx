@@ -72,7 +72,7 @@ const Header = () => {
                     <Link href={TWITTER_URL} target="_blank">
                         <Button bg="gray.700">
                             <Flex align="center">
-                                <FaTwitter color={"brand.400"} />
+                                <FaTwitter style={{ color: "brand.800" }} />
                             </Flex>
                         </Button>
                     </Link>
