@@ -62,11 +62,11 @@ const SignUp = () => {
         <Box my={24}>
             <Flex direction="column">
                 <Center>
-                    <Text fontSize="4xl">Get notified when we launch</Text>
+                    <Text textAlign="center" fontSize="4xl">Get notified when we launch</Text>
                 </Center>
                 <VStack justify="center" m="6">
                     <VStack py={6}>
-                        <Text fontSize="lg">
+                        <Text fontSize="lg" textAlign="center" >
                             We will not share your email with third parties.
                         </Text>
                         <Input
@@ -77,7 +77,7 @@ const SignUp = () => {
                                 backgroundColor: "brand.800",
                             }}
                             color={"white"}
-                            width={"500px"}
+                            maxWidth={"500px"}
                             name="email"
                             value={email}
                             onChange={(e: any) => setEmail(e.target.value)}
@@ -97,7 +97,7 @@ const SignUp = () => {
                         fontWeight={"normal"}
                         backgroundColor={"brand.800"}
                         color={"brand.100"}
-                        width={"220px"}
+                        maxWidth={"220px"}
                         px={6}
                         onClick={handleSubmit}
                         my={8}
