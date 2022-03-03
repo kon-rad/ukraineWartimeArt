@@ -13,11 +13,14 @@ import { CheckIcon } from "@chakra-ui/icons";
 import { toast } from "react-toastify";
 import { collection, addDoc, getFirestore } from "firebase/firestore";
 
-const db: any = getFirestore();
 
 const SignUp = () => {
     const [email, setEmail] = useState<string>("");
     const [mediaQuery] = useMediaQuery("(max-width: 600px)");
+    let db: any;
+    useEffect(() => {
+        db = getFirestore();
+    }, [])
 
     const handleSubmit = async () => {
         debugger;
