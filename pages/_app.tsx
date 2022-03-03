@@ -12,6 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { Web3Provider, ExternalProvider } from "@ethersproject/providers";
 import { AppStateProvider } from "../context/appState";
 import { initializeApp, getApp, getApps } from "firebase/app";
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 const firebaseConfig = {
     apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -24,7 +25,12 @@ const firebaseConfig = {
 
 export const app =
     getApps().length === 0 ? initializeApp(firebaseConfig) : getApp();
-    
+
+let analytics: any;
+
+if (typeof window !== 'undefined') {
+  analytics = getAnalytics(app);
+}
 // /* CSS HEX */
 // https://coolors.co/202a25-5f4bb6-86a5d9-26f0f1-c4ebc8
 // --dark-jungle-green: #202a25ff;
