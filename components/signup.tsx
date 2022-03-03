@@ -62,7 +62,7 @@ const SignUp = () => {
         <Box my={24}>
             <Flex direction="column">
                 <Center>
-                    <Text fontSize="4xl">Get notified about the launch</Text>
+                    <Text fontSize="4xl">Get notified when we launch</Text>
                 </Center>
                 <VStack justify="center" m="6">
                     <VStack py={6}>
