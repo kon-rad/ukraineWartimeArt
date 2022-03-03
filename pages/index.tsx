@@ -15,8 +15,8 @@ const Home: NextPage = () => {
     <Box m={16}>
       <Hero />
       <SignUp />
-      {/* <Collections />
       <Team />
+      {/* <Collections />
       <Roadmap /> */}
     </Box>
   )

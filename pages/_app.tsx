@@ -63,6 +63,7 @@ const theme = extendTheme({
       600: "#ea3546", // red
       700: "#D6E3F8", // periwinkle crayola
       800: "#ffd500", // ukraine yellow
+      900: "#005bbb", // saphire ukrainian blue
     },
   },
 });
