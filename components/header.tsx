@@ -12,6 +12,7 @@ import {
 import { FaTwitter } from "react-icons/fa";
 import NextLink from "next/link";
 import Wallet from "./wallet";
+import { TWITTER_URL } from '../utils/constants';
 
 const Header = () => {
     const [isMobile] = useMediaQuery("(max-width: 600px)");
@@ -68,7 +69,7 @@ const Header = () => {
             </Box>
             <Box mr={4}>
                 <LinkBox>
-                    <Link href={"https://twitter.com"} target="_blank">
+                    <Link href={TWITTER_URL} target="_blank">
                         <Button bg="gray.700">
                             <Flex align="center">
                                 <FaTwitter color={"brand.400"} />

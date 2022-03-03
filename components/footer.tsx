@@ -12,6 +12,7 @@ import {
     HStack,
 } from "@chakra-ui/react";
 import { FaTwitter } from "react-icons/fa";
+import { TWITTER_URL } from '../utils/constants';
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
     return (
@@ -64,13 +65,14 @@ export default function Footer() {
                 <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
                     <Stack align={"flex-start"}>
                         <ListHeader>Company</ListHeader>
-                        <Link href={"https://twitter.com"} target="_blank">
+                        <Link href={TWITTER_URL} target="_blank">
                             <HStack>
                                 <FaTwitter /> Twitter
                             </HStack>
                         </Link>
-                        <Link href={"#"}>About Us</Link>
-                        <Link href={"#"}>Contact Us</Link>
+                        <Link href={"#collections"}>Collections</Link>
+                        <Link href={"#team"}>Team</Link>
+                        <Link href={"#roadmap"}>Roadmap</Link>
                     </Stack>
 
                     <Stack align={"flex-start"}>

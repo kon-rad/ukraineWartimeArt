@@ -4,10 +4,9 @@ const Hero = () => {
     return (
         <Flex>
             <Flex direction="column" justify="center" mr={18} height="400px">
-                <Text fontSize="6xl">Ukraine Wartime Art</Text>
-                <Text fontSize="xl">
-                    we need to include a sentance or two that captures the
-                    project main idea
+                <Text fontSize="4xl">A series of Ukraine wartime art NFT collections</Text>
+                <Text fontSize="md">
+                    We aim to raise aid funds for Ukraine with a series of NFT collections from a range of artists. Each collection has a unique story and cause. Become a part of world history by supporting Ukraine in fending off the aggression!
                 </Text>
             </Flex>
             <Box>
