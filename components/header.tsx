@@ -66,22 +66,24 @@ export default function Header() {
                     flex={{ base: 1 }}
                     justify={{ base: "space-between", md: "space-between" }}
                 >
-                    <Flex>
-                        <Image
-                            borderRadius="12px"
-                            mr="4"
-                            src="/images/flag.png"
-                            width="40px"
-                            height="40px"
-                        />
-                        {isMobile ? (
-                            ""
-                        ) : (
-                            <Text fontWeight="bold" fontSize="2xl">
-                                Ukraine Wartime Art
-                            </Text>
-                        )}
-                    </Flex>
+                        <Link href="/" >
+                          <Flex justify="center">
+                            <Image
+                                borderRadius="12px"
+                                mr="4"
+                                src="/images/flag.png"
+                                width="40px"
+                                height="40px"
+                            />
+                            {isMobile ? (
+                                ""
+                            ) : (
+                                <Text fontWeight="bold" fontSize="2xl">
+                                    Ukraine Wartime Art
+                                </Text>
+                            )}
+                            </Flex>
+                        </Link>
 
                     <Flex display={{ base: "none", md: "flex" }} ml={10}>
                         <DesktopNav />
