@@ -65,26 +65,32 @@ const SignUp = () => {
                     <Text fontSize="4xl">Get notified about the launch</Text>
                 </Center>
                 <VStack justify="center" m="6">
-                    <Input
-                        mb={6}
-                        style={{
-                            fontFamily: "Exo",
-                            color: "white",
-                            backgroundColor: "brand.800",
-                        }}
-                        width={"500px"}
-                        name="email"
-                        value={email}
-                        onChange={(e: any) => setEmail(e.target.value)}
-                        placeholder="enter your email"
-                    />
+                    <VStack py={6}>
+                        <Text fontSize="lg">
+                            We will not share your email with third parties.
+                        </Text>
+                        <Input
+                            mb={6}
+                            style={{
+                                fontFamily: "Exo",
+                                color: "white",
+                                backgroundColor: "brand.800",
+                            }}
+                            color={"white"}
+                            width={"500px"}
+                            name="email"
+                            value={email}
+                            onChange={(e: any) => setEmail(e.target.value)}
+                            placeholder="enter your email"
+                        />
+                    </VStack>
                     <Button
                         style={{
                             fontFamily: "Exo",
                         }}
                         _hover={{
-                          background: "brand.800",
-                          color: "brand.100",
+                            background: "brand.800",
+                            color: "brand.100",
                         }}
                         borderRadius="8px"
                         size={"lg"}
@@ -94,13 +100,10 @@ const SignUp = () => {
                         width={"220px"}
                         px={6}
                         onClick={handleSubmit}
-                        mb={6}
+                        my={8}
                     >
                         Get Notified
                     </Button>
-                    <Text fontSize="lg">
-                        We will not share your email with third parties.
-                    </Text>
                 </VStack>
             </Flex>
         </Box>
