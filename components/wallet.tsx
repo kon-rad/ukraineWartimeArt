@@ -26,11 +26,11 @@ const Wallet = () => {
         <>
             {!web3Connect.active && 
                 <Menu>
-                    <MenuButton as={Button} bg="gray.700" color="brand.400" rightIcon={<ChevronDownIcon />}>
+                    <MenuButton as={Button} bg="gray.700" color="brand.700" rightIcon={<ChevronDownIcon />}>
                         Connect
                     </MenuButton>
                     <MenuList>
-                        <MenuItem bg="gray.700" color="brand.400" onClick={connect}>Metamask</MenuItem>
+                        <MenuItem bg="gray.700" color="brand.700" onClick={connect}>Metamask</MenuItem>
                     </MenuList>
                 </Menu>
             }

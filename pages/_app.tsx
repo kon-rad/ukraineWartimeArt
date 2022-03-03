@@ -19,6 +19,10 @@ import { AppStateProvider } from "../context/appState";
 // --little-boy-blue: #86a5d9ff;
 // --fluorescent-blue: #26f0f1ff;
 // --tea-green: #c4ebc8ff;
+// oxford blue #0E1C36
+// rich black #040F0F
+// space cadet #1B1F3B
+// periwinkle crayola #D6E3F8
 
 const theme = extendTheme({
   config: {
@@ -26,6 +30,11 @@ const theme = extendTheme({
     initialColorMode: "dark",
   },
   colors: {
+    gray: {
+      700: "#1B1F3B",
+      800: "#040F0F",
+      900: "#0E1C36",
+    },
     brand: {
       100: "#202a25ff",
       200: "#5f4bb6ff",
@@ -33,6 +42,7 @@ const theme = extendTheme({
       400: "#26f0f1ff",
       500: "#c4ebc8ff",
       600: "#ea3546", // red
+      700: "#D6E3F8", // periwinkle crayola
     },
   },
 });
