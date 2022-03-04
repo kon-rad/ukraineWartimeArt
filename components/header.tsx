@@ -316,15 +316,15 @@ const NAV_ITEMS: Array<NavItem> = [
         //         href: "/soldier-pfp",
         //     },
         // ],
-        href: "#collections",
+        href: "/#collections",
     },
     {
         label: "Team",
-        href: "#team",
+        href: "/#team",
     },
     {
         label: "Roadmap",
-        href: "#roadmap",
+        href: "/#roadmap",
     },
 ];
 

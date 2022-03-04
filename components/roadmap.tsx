@@ -1,4 +1,5 @@
-import { Box, Flex, Text, Image } from '@chakra-ui/react';
+import { useMediaQuery, Box, Flex, Text, Image } from '@chakra-ui/react';
+import { useState, useEffect } from 'react';
 
 const ROADMAP = [
     {
@@ -24,6 +25,14 @@ const ROADMAP = [
 ]
 
 const Roadmap = () => {
+    const [mediaQuery] = useMediaQuery("(max-width: 600px)");
+    const [isMobile, setIsMobile] = useState(false)
+  
+    useEffect(() => {
+      if(mediaQuery !== isMobile){
+        setIsMobile(mediaQuery);
+      }
+    }, [mediaQuery])
     const renderItem = (c: any) => {
         return (
             <Flex direction="column">
@@ -34,10 +43,16 @@ const Roadmap = () => {
         )
     }
     return (
-        <Box my="40px">
-            <Flex direction="column">
+        <Box my="40px" id="roadmap">
+            <Text fontSize={isMobile ? "4xl" : "6xl"} textAlign="center" mb="6">
+                Roadmap
+            </Text>
+            <Text fontSize={"2xl"} textAlign="center" mb="6">
+                coming soon
+            </Text>
+            {/* <Flex direction="column">
                 {ROADMAP.map(renderItem)}
-            </Flex>
+            </Flex> */}
         </Box>
     )
 }

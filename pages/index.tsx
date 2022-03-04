@@ -1,7 +1,4 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import Hero from '../components/hero';
 import Collections from '../components/collections';
 import Team from '../components/team';
@@ -17,8 +14,7 @@ const Home: NextPage = () => {
       <Collections />
       <SignUp />
       <Team />
-      {/* 
-      <Roadmap /> */}
+      <Roadmap />
     </Box>
   )
 }
