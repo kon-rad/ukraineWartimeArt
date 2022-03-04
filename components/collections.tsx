@@ -46,7 +46,7 @@ const Collections = () => {
         );
     };
     return (
-        <Box my="40px">
+        <Box my="40px" id="collections">
             <Text fontSize="6xl" textAlign="center" mb="6">
                 Collections
             </Text>

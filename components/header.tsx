@@ -304,18 +304,19 @@ interface NavItem {
 const NAV_ITEMS: Array<NavItem> = [
     {
         label: "Collections",
-        children: [
-            {
-                label: "Wartime Childrens Art",
-                subLabel: "Collection of 240 unique pieces",
-                href: "/wartime-childrens-art",
-            },
-            {
-                label: "Ukraine Soldiers PFP",
-                subLabel: "Set of 10,000 unique profile images",
-                href: "/soldier-pfp",
-            },
-        ],
+        // children: [
+        //     {
+        //         label: "Wartime Childrens Art",
+        //         subLabel: "Collection of 240 unique pieces",
+        //         href: "/wartime-childrens-art",
+        //     },
+        //     {
+        //         label: "Ukraine Soldiers PFP",
+        //         subLabel: "Set of 10,000 unique profile images",
+        //         href: "/soldier-pfp",
+        //     },
+        // ],
+        href: "#collections",
     },
     {
         label: "Team",
