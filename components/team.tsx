@@ -14,7 +14,7 @@ const TEAM = [
     {
         image: "/images/team/maya-tohidi.jpeg",
         title: "Maya Tohidi",
-        desc: "bio soon to come",
+        desc: "Artist, technologist and founder of Inspir.ED Atitlan, Maryam grew up in Iran during war. With this project she hopes to honor the courage and resilience of the children making bold and inspiring wartime art.  ",
     },
     {
         image: "/images/team/jarko-filevych.jpg",
