@@ -67,7 +67,7 @@ const SignUp = () => {
             <Flex direction="column">
                 <Center>
                     <Text textAlign="center" fontSize="4xl">
-                        Get notified when we launch
+                        Get notified about next collection
                     </Text>
                 </Center>
                 <VStack justify="center" m="6">
