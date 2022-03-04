@@ -28,7 +28,7 @@ const Team = () => {
         return (
             <Flex
                 width="320px"
-                minHeight="400px"
+                minHeight="440px"
                 direction="column"
                 p={6}
                 m={4}
@@ -38,8 +38,8 @@ const Team = () => {
             >
                 <Image
                     style={{ margin: "0 auto 40px" }}
-                    width="180px"
-                    borderRadius="12px"
+                    height="180px"
+                    borderRadius="100%"
                     src={c.image}
                 />
                 <Text
