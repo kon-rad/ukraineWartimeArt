@@ -143,17 +143,35 @@ const Creatures: NextPage = () => {
                 Mint is Live
               </Text>
               <Text textAlign="center" color={"brand.800"} fontSize="md">
-                {earlyMint ? "* First 50 Mints for 5 MATIC *" : `price ${MINT_PRICE} MATIC`}
+                {earlyMint
+                  ? "* First 50 Mints for 5 MATIC *"
+                  : `price ${MINT_PRICE} MATIC`}
               </Text>
-              <Flex mt={'6'} justify="center">
+              <Flex mt={"6"} justify="center">
                 <Input
                   mr={4}
-                  width={'180px'}
+                  width={"180px"}
                   placeholder="Quantity"
                   value={qty}
                   onChange={(e: any) => setQty(+e.target.value)}
                 />
-                <Button onClick={handleMint}>Mint</Button>
+                <Button
+                  style={{
+                    fontFamily: "Exo",
+                  }}
+                  _hover={{
+                    background: "brand.800",
+                    color: "brand.100",
+                  }}
+                  borderRadius="8px"
+                  size={"md"}
+                  fontWeight={"normal"}
+                  backgroundColor={"brand.800"}
+                  color={"brand.100"}
+                  onClick={handleMint}
+                >
+                  Mint
+                </Button>
               </Flex>
             </Flex>
           )}
