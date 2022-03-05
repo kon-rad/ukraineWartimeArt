@@ -1,1 +1,1 @@
-export const miroslavasCreaturesAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+export const miroslavasCreaturesAddress = "0xf562218356FA3f8A6630cc275a5e79B02Dc787AF";

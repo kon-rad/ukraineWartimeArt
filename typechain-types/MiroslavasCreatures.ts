@@ -21,12 +21,15 @@ import { TypedEventFilter, TypedEvent, TypedListener, OnEvent } from "./common";
 export interface MiroslavasCreaturesInterface extends utils.Interface {
   contractName: "MiroslavasCreatures";
   functions: {
+    "EARLY_MINT()": FunctionFragment;
     "MAX_CREATURES()": FunctionFragment;
     "MAX_PER_MINT()": FunctionFragment;
     "active()": FunctionFragment;
     "approve(address,uint256)": FunctionFragment;
     "balanceOf(address)": FunctionFragment;
     "baseURI()": FunctionFragment;
+    "earlyCount()": FunctionFragment;
+    "earlyPrice()": FunctionFragment;
     "getApproved(uint256)": FunctionFragment;
     "getBalance()": FunctionFragment;
     "isApprovedForAll(address,address)": FunctionFragment;
@@ -54,6 +57,10 @@ export interface MiroslavasCreaturesInterface extends utils.Interface {
   };
 
   encodeFunctionData(
+    functionFragment: "EARLY_MINT",
+    values?: undefined
+  ): string;
+  encodeFunctionData(
     functionFragment: "MAX_CREATURES",
     values?: undefined
   ): string;
@@ -68,6 +75,14 @@ export interface MiroslavasCreaturesInterface extends utils.Interface {
   ): string;
   encodeFunctionData(functionFragment: "balanceOf", values: [string]): string;
   encodeFunctionData(functionFragment: "baseURI", values?: undefined): string;
+  encodeFunctionData(
+    functionFragment: "earlyCount",
+    values?: undefined
+  ): string;
+  encodeFunctionData(
+    functionFragment: "earlyPrice",
+    values?: undefined
+  ): string;
   encodeFunctionData(
     functionFragment: "getApproved",
     values: [BigNumberish]
@@ -147,6 +162,7 @@ export interface MiroslavasCreaturesInterface extends utils.Interface {
   ): string;
   encodeFunctionData(functionFragment: "withdraw", values?: undefined): string;
 
+  decodeFunctionResult(functionFragment: "EARLY_MINT", data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: "MAX_CREATURES",
     data: BytesLike
@@ -159,6 +175,8 @@ export interface MiroslavasCreaturesInterface extends utils.Interface {
   decodeFunctionResult(functionFragment: "approve", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "balanceOf", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "baseURI", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "earlyCount", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "earlyPrice", data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: "getApproved",
     data: BytesLike
@@ -299,6 +317,8 @@ export interface MiroslavasCreatures extends BaseContract {
   removeListener: OnEvent<this>;
 
   functions: {
+    EARLY_MINT(overrides?: CallOverrides): Promise<[BigNumber]>;
+
     MAX_CREATURES(overrides?: CallOverrides): Promise<[BigNumber]>;
 
     MAX_PER_MINT(overrides?: CallOverrides): Promise<[BigNumber]>;
@@ -314,6 +334,10 @@ export interface MiroslavasCreatures extends BaseContract {
     balanceOf(owner: string, overrides?: CallOverrides): Promise<[BigNumber]>;
 
     baseURI(overrides?: CallOverrides): Promise<[string]>;
+
+    earlyCount(overrides?: CallOverrides): Promise<[BigNumber]>;
+
+    earlyPrice(overrides?: CallOverrides): Promise<[BigNumber]>;
 
     getApproved(
       tokenId: BigNumberish,
@@ -426,6 +450,8 @@ export interface MiroslavasCreatures extends BaseContract {
     ): Promise<ContractTransaction>;
   };
 
+  EARLY_MINT(overrides?: CallOverrides): Promise<BigNumber>;
+
   MAX_CREATURES(overrides?: CallOverrides): Promise<BigNumber>;
 
   MAX_PER_MINT(overrides?: CallOverrides): Promise<BigNumber>;
@@ -441,6 +467,10 @@ export interface MiroslavasCreatures extends BaseContract {
   balanceOf(owner: string, overrides?: CallOverrides): Promise<BigNumber>;
 
   baseURI(overrides?: CallOverrides): Promise<string>;
+
+  earlyCount(overrides?: CallOverrides): Promise<BigNumber>;
+
+  earlyPrice(overrides?: CallOverrides): Promise<BigNumber>;
 
   getApproved(
     tokenId: BigNumberish,
@@ -547,6 +577,8 @@ export interface MiroslavasCreatures extends BaseContract {
   ): Promise<ContractTransaction>;
 
   callStatic: {
+    EARLY_MINT(overrides?: CallOverrides): Promise<BigNumber>;
+
     MAX_CREATURES(overrides?: CallOverrides): Promise<BigNumber>;
 
     MAX_PER_MINT(overrides?: CallOverrides): Promise<BigNumber>;
@@ -562,6 +594,10 @@ export interface MiroslavasCreatures extends BaseContract {
     balanceOf(owner: string, overrides?: CallOverrides): Promise<BigNumber>;
 
     baseURI(overrides?: CallOverrides): Promise<string>;
+
+    earlyCount(overrides?: CallOverrides): Promise<BigNumber>;
+
+    earlyPrice(overrides?: CallOverrides): Promise<BigNumber>;
 
     getApproved(
       tokenId: BigNumberish,
@@ -702,6 +738,8 @@ export interface MiroslavasCreatures extends BaseContract {
   };
 
   estimateGas: {
+    EARLY_MINT(overrides?: CallOverrides): Promise<BigNumber>;
+
     MAX_CREATURES(overrides?: CallOverrides): Promise<BigNumber>;
 
     MAX_PER_MINT(overrides?: CallOverrides): Promise<BigNumber>;
@@ -717,6 +755,10 @@ export interface MiroslavasCreatures extends BaseContract {
     balanceOf(owner: string, overrides?: CallOverrides): Promise<BigNumber>;
 
     baseURI(overrides?: CallOverrides): Promise<BigNumber>;
+
+    earlyCount(overrides?: CallOverrides): Promise<BigNumber>;
+
+    earlyPrice(overrides?: CallOverrides): Promise<BigNumber>;
 
     getApproved(
       tokenId: BigNumberish,
@@ -830,6 +872,8 @@ export interface MiroslavasCreatures extends BaseContract {
   };
 
   populateTransaction: {
+    EARLY_MINT(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
     MAX_CREATURES(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     MAX_PER_MINT(overrides?: CallOverrides): Promise<PopulatedTransaction>;
@@ -848,6 +892,10 @@ export interface MiroslavasCreatures extends BaseContract {
     ): Promise<PopulatedTransaction>;
 
     baseURI(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    earlyCount(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    earlyPrice(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     getApproved(
       tokenId: BigNumberish,

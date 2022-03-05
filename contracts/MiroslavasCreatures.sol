@@ -1,10 +1,10 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.0;
 
-import "hardhat/console.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+import "@openzeppelin/contracts/utils/Strings.sol"; 
 
 contract MiroslavasCreatures is ERC721Enumerable, Ownable, ReentrancyGuard {
     
@@ -49,23 +49,15 @@ contract MiroslavasCreatures is ERC721Enumerable, Ownable, ReentrancyGuard {
         require(quantity <= MAX_PER_MINT, "Requested quantity exceeds max per mint");
         require(quantity > 0, "Must mint at least one creature");
 
-        if (earlyCount < EARLY_MINT) {
-            uint256 earlyMintCost = earlyPrice;
-            require(earlyMintCost <= msg.value, "Value sent is not correct");
-            require(quantity == 1, "Early mint quantity can only be one");
-            earlyCount++;
-            mintedCount++;
-            _safeMint(msg.sender, 1);
-        } else {
-            uint256 costToMint = price * quantity;
-            require(costToMint <= msg.value, "Value sent is not correct");
-            
-            for (uint256 i = 0; i < quantity; i++) {
-                uint256 creatureIndex = mintedCount;
-                if (creatureIndex < MAX_CREATURES) {
-                    mintedCount++;
-                    _safeMint(msg.sender, creatureIndex);
-                }
+        uint256 actualMintPrice = (earlyCount + quantity) < EARLY_MINT ? earlyPrice : price;
+
+        uint256 costToMint = actualMintPrice * quantity;
+        require(costToMint <= msg.value, "Value sent is not correct");
+        
+        for (uint256 i = 0; i < quantity; i++) {
+            if (mintedCount < MAX_CREATURES) {
+                mintedCount++;
+                _safeMint(msg.sender, mintedCount);
             }
         }
         
@@ -88,5 +80,11 @@ contract MiroslavasCreatures is ERC721Enumerable, Ownable, ReentrancyGuard {
 
     function selfDestruct() public onlyOwner {
         selfdestruct(payable(address(owner())));
+    }
+    
+    function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
+        require(_exists(tokenId), "ERC721Metadata: URI query for nonexistent token");
+
+        return bytes(baseURI).length > 0 ? string(abi.encodePacked(baseURI, Strings.toString(tokenId), ".json")) : "";
     }
 }

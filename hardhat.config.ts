@@ -53,7 +53,7 @@ const config: any = {
     },
     matic: {
       url: process.env.ALCHEMY_URL,
-      accounts: [process.env.PRIVATE_KEY || ''],
+      accounts: [process.env.PRIVATE_KEY || ''], // account address: 0xAf809EE4F47a194419764cbbf37024Ab25166E5b
     },
     // localhost: {
     //   accounts: [process.env.PRIVATE_KEY || ''],

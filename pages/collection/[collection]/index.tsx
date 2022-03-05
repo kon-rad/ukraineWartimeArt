@@ -23,6 +23,8 @@ const Creatures: NextPage = () => {
     const collectionName = router.query.collection + "";
     setCol(COLLECTIONS[collectionName]);
   }, [router.query.collection]);
+  const earlyMint = true;
+  const MINT_PRICE = earlyMint ? 5 : 150;
 
   const handleMint = async () => {
     console.log("checkout ");
@@ -41,7 +43,7 @@ const Creatures: NextPage = () => {
       return;
     }
     try {
-      const ethValue = web3.utils.toWei((qty * 150).toString(), "ether");
+      const ethValue = web3.utils.toWei((qty * MINT_PRICE).toString(), "ether");
       const signer = provider.getSigner();
       const contract = new ethers.Contract(
         miroslavasCreaturesAddress,
@@ -67,7 +69,7 @@ const Creatures: NextPage = () => {
       );
       console.log("transData: ", transData.transactionHash);
     } catch (e) {
-      toast.error(`Error: ${e.message}`, {
+      toast.error(`Error: ${e.data ? e.data.message : e.message}`, {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -140,9 +142,13 @@ const Creatures: NextPage = () => {
               <Text textAlign="center" color={"brand.800"} fontSize="2xl">
                 Mint is Live
               </Text>
-              <Flex>
+              <Text textAlign="center" color={"brand.800"} fontSize="md">
+                {earlyMint ? "* First 50 Mints for 5 MATIC *" : `price ${MINT_PRICE} MATIC`}
+              </Text>
+              <Flex mt={'6'} justify="center">
                 <Input
                   mr={4}
+                  width={'180px'}
                   placeholder="Quantity"
                   value={qty}
                   onChange={(e: any) => setQty(+e.target.value)}

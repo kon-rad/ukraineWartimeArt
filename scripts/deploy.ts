@@ -17,7 +17,7 @@ async function main() {
 
   const NAME = "Miroslavas Protector Creatures";
   const SYMBOL = "MPC";
-  const URI = "MPC";
+  const URI = "https://www.ukrainewartime.art/miroslavas-creatures/json/";
 
   const MiroslavasCreatures = await ethers.getContractFactory("MiroslavasCreatures");
   const miroslavasCreatures = await MiroslavasCreatures.deploy(NAME, SYMBOL, URI);

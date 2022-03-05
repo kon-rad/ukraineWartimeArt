@@ -63,8 +63,8 @@ async function main() {
     // totalSupply();
     // printActive();
     // toggleActive();
-    // tokenURI(0);
-    setBaseURI("https://www.ukrainewartime.art/miroslavas-creatures/json/");
+    tokenURI(18);
+    // setBaseURI("https://www.ukrainewartime.art/miroslavas-creatures/json/");
 }
 
 main();
