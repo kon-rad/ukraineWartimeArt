@@ -27,7 +27,7 @@ const Collections = () => {
       >
           <Image
             src={c.image}
-            width="180px"
+            width="280px"
             objectFit="cover"
             m={isMobile ? "20px auto" : 6}
             borderRadius="12px"

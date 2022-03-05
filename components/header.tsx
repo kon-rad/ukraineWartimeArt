@@ -71,7 +71,7 @@ export default function Header() {
                             <Image
                                 borderRadius="12px"
                                 mr="4"
-                                src="/images/flag.png"
+                                src="/images/logo.jpeg"
                                 width="40px"
                                 height="40px"
                             />
