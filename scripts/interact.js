@@ -48,9 +48,13 @@ const printActive = async () => {
     const active = await creatures.active();
     console.log("The active response is: " + active);
 }
-const getBaseURI = async () => {
-    const baseURI = await creatures.baseURI();
-    console.log("The baseURI response is: " + baseURI);
+const tokenURI = async (id) => {
+    const token = await creatures.tokenURI(id);
+    console.log("The tokenURI  is: " + token);
+}
+const setBaseURI = async (uri) => {
+    const res = await creatures.setBaseURI(uri);
+    console.log("The response  is: " + res);
 }
 async function main() {
     printBalance();
@@ -59,7 +63,8 @@ async function main() {
     // totalSupply();
     // printActive();
     // toggleActive();
-    getBaseURI();
+    // tokenURI(0);
+    setBaseURI("https://www.ukrainewartime.art/miroslavas-creatures/json/");
 }
 
 main();

@@ -10,8 +10,11 @@ contract MiroslavasCreatures is ERC721Enumerable, Ownable, ReentrancyGuard {
     
     string public baseURI;
     uint256 public mintedCount = 0;
+    uint256 public earlyCount = 0;
     uint256 public MAX_CREATURES = 2500;
     uint256 public MAX_PER_MINT = 50;
+    uint256 public EARLY_MINT = 50;
+    uint256 public earlyPrice = 5 ether;
     uint256 public price = 150 ether;
     bool public active;
 
@@ -46,17 +49,26 @@ contract MiroslavasCreatures is ERC721Enumerable, Ownable, ReentrancyGuard {
         require(quantity <= MAX_PER_MINT, "Requested quantity exceeds max per mint");
         require(quantity > 0, "Must mint at least one creature");
 
-        uint256 costToMint = price * quantity;
-        require(costToMint <= msg.value, "Value sent is not correct");
-        
-        for (uint256 i = 0; i < quantity; i++) {
-            uint256 creatureIndex = mintedCount;
-            if (creatureIndex < MAX_CREATURES) {
-                mintedCount++;
-                _safeMint(msg.sender, creatureIndex);
+        if (earlyCount < EARLY_MINT) {
+            uint256 earlyMintCost = earlyPrice;
+            require(earlyMintCost <= msg.value, "Value sent is not correct");
+            require(quantity == 1, "Early mint quantity can only be one");
+            earlyCount++;
+            mintedCount++;
+            _safeMint(msg.sender, 1);
+        } else {
+            uint256 costToMint = price * quantity;
+            require(costToMint <= msg.value, "Value sent is not correct");
+            
+            for (uint256 i = 0; i < quantity; i++) {
+                uint256 creatureIndex = mintedCount;
+                if (creatureIndex < MAX_CREATURES) {
+                    mintedCount++;
+                    _safeMint(msg.sender, creatureIndex);
+                }
             }
         }
-
+        
         // if sent too much, return to sender left over ether
         if (msg.value > costToMint) {
             Address.sendValue(payable(msg.sender), msg.value - costToMint);
