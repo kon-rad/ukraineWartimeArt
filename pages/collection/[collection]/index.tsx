@@ -148,7 +148,7 @@ const Creatures: NextPage = () => {
           {col.descriptionElements &&
             col.descriptionElements.map((e: any) => renderElem(e))}
           {col.minting && (
-            <Flex mt={12} direction="column">
+            <Flex id="mint" mt={12} direction="column">
               <Text textAlign="center" color={"brand.800"} fontSize="2xl">
                 Mint is Live
               </Text>
