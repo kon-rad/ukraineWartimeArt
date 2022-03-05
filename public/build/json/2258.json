@@ -1,0 +1,27 @@
+{
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "Background-5"
+        },
+        {
+            "trait_type": "hue",
+            "value": 8
+        },
+        {
+            "trait_type": "creature",
+            "value": "Mimi the Centipede"
+        },
+        {
+            "trait_type": "lowfi",
+            "value": false
+        }
+    ],
+    "compiler": "Ukraine Wartime Art Engine",
+    "date": 1646436582606,
+    "description": "Despite their disturbing appearance, all creatures Mira brings into existence are kind. According to her, these creatures are protectors who suffered while defending children. Their appearance is frightening and because of this they donare lonely. Join Mira\u2019s creatures in making this world safer for children and babies affected by the war.",
+    "dna": "777fbd6e4919a71ea71be42d4cfb37774bf8f634",
+    "edition": 2258,
+    "image": "ipfs://QmYZ7HNgB4okyUHPevi4rfpSg6AE51WPRk3RRiN4cc1T5F/2258.png",
+    "name": "Miroslava's Protector Creatures #2258"
+}

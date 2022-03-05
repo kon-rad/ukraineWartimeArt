@@ -1,0 +1,27 @@
+{
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "Background-11"
+        },
+        {
+            "trait_type": "hue",
+            "value": 9
+        },
+        {
+            "trait_type": "creature",
+            "value": "Witty"
+        },
+        {
+            "trait_type": "lowfi",
+            "value": false
+        }
+    ],
+    "compiler": "Ukraine Wartime Art Engine",
+    "date": 1646436601406,
+    "description": "Despite their disturbing appearance, all creatures Mira brings into existence are kind. According to her, these creatures are protectors who suffered while defending children. Their appearance is frightening and because of this they donare lonely. Join Mira\u2019s creatures in making this world safer for children and babies affected by the war.",
+    "dna": "45782cdb57f9cba5a34d9cc5b708edb4c004215d",
+    "edition": 2379,
+    "image": "ipfs://QmYZ7HNgB4okyUHPevi4rfpSg6AE51WPRk3RRiN4cc1T5F/2379.png",
+    "name": "Miroslava's Protector Creatures #2379"
+}

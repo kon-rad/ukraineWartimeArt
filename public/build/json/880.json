@@ -1,0 +1,27 @@
+{
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "Background-28"
+        },
+        {
+            "trait_type": "hue",
+            "value": 0
+        },
+        {
+            "trait_type": "creature",
+            "value": "Destiny"
+        },
+        {
+            "trait_type": "lowfi",
+            "value": false
+        }
+    ],
+    "compiler": "Ukraine Wartime Art Engine",
+    "date": 1646436345571,
+    "description": "Destiny is a cute creature who used to be a security robot protecting kids. Destiny lost her mind as adults are extremely illogical, while robots need logic to operate. One day she got in a fire, which damaged the hull covering her endoskeleton and made her a bit mutant. Destiny didn\u2019t understand why children are afraid of her. She is still striving to fulfill her mission, but now no one wants to be with her. Join Mira\u2019s creatures in making this world safer for children and babies affected by the war.",
+    "dna": "d6b9c6f864fdca28c17a3c30759e2a3c85cc332b",
+    "edition": 880,
+    "image": "ipfs://QmYZ7HNgB4okyUHPevi4rfpSg6AE51WPRk3RRiN4cc1T5F/880.png",
+    "name": "Miroslava's Protector Creatures #880"
+}
