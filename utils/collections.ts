@@ -1,9 +1,5 @@
 import { Box, Text, Flex, Image } from '@chakra-ui/react';
 
-const CreaturesContent = (
-    <Flex></Flex>
-)
-
 export const COLLECTIONS = {
     creatures:
     {
