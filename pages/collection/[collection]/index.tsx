@@ -85,6 +85,14 @@ const Creatures: NextPage = () => {
   if (!col) {
     return <Box>loading</Box>;
   }
+  const renderElem = (e: any) => {
+    switch (e.type) {
+      case "Text":
+        return <Text style={e.style}>{e.content}</Text>;
+      case "Image":
+        return <Image src={e.src} style={e.style} />;
+    }
+  };
 
   return (
     <Box m={16}>
@@ -137,6 +145,8 @@ const Creatures: NextPage = () => {
             </Text>
             <Text fontSize="md">{col.quantity}</Text>
           </Flex>
+          {col.descriptionElements &&
+            col.descriptionElements.map((e: any) => renderElem(e))}
           {col.minting && (
             <Flex mt={12} direction="column">
               <Text textAlign="center" color={"brand.800"} fontSize="2xl">
