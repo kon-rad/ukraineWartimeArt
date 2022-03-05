@@ -39,6 +39,8 @@ export function SEO(props: Props) {
                 content={description}
                 key="description"
             />
+            <meta property="twitter:image" content={image} />
+            <meta property="og:image" content={image} />
             <meta name="image" content={image} key="image" />
 
             <link rel="manifest" href="/manifest.json" />
