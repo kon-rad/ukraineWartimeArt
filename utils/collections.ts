@@ -3,7 +3,7 @@ export const COLLECTIONS = {
     {
         image: "/images/creatures/preview.gif",
         title: "Miroslava's Protector Creatures",
-        desc: "The proceeds will go to Isida women’s health clinic (95%) and to the artist (5%). Isida clinic provides free help to all women and it needs your support now. ",
+        desc: "The proceeds will go to Isida women's health clinic (95%) and to the artist (5%). Isida clinic provides free help to all women and it needs your support now. ",
         launch: "Friday March 4th, 7PM PST",
         network: "Polygon",
         price: "150 Matic",
