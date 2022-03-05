@@ -48,13 +48,18 @@ const printActive = async () => {
     const active = await creatures.active();
     console.log("The active response is: " + active);
 }
+const getBaseURI = async () => {
+    const baseURI = await creatures.baseURI();
+    console.log("The baseURI response is: " + baseURI);
+}
 async function main() {
     printBalance();
     // withdrawBalance();
     // printBalance();
     // totalSupply();
-    printActive()
+    // printActive();
     // toggleActive();
+    getBaseURI();
 }
 
 main();
