@@ -17,10 +17,16 @@ import { collection, addDoc, getFirestore } from "firebase/firestore";
 const SignUp = () => {
     const [email, setEmail] = useState<string>("");
     const [mediaQuery] = useMediaQuery("(max-width: 600px)");
+    const [isMobile, setIsMobile] = useState(false);
+  
     let db: any;
+
     useEffect(() => {
         db = getFirestore();
-    }, [])
+      if (mediaQuery !== isMobile) {
+        setIsMobile(mediaQuery);
+      }
+    }, [mediaQuery]);
 
     const handleSubmit = async () => {
         debugger;
@@ -66,7 +72,7 @@ const SignUp = () => {
         <Box my={24}>
             <Flex direction="column">
                 <Center>
-                    <Text textAlign="center" fontSize="4xl">
+                    <Text textAlign="center" fontSize={isMobile ? "2xl" : "4xl"}>
                         Get notified about next collection
                     </Text>
                 </Center>

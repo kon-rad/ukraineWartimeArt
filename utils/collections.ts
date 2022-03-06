@@ -2,6 +2,7 @@ import { Box, Text, Flex, Image } from "@chakra-ui/react";
 
 export const COLLECTIONS = {
   creatures: {
+    id: 'creatures',
     image: "/images/creatures/preview.gif",
     title: "Miroslava's Protector Creatures",
     desc: "The proceeds will go to Isida women's health clinic (95%) and to the artist (5%). Isida clinic provides free help to all women and it needs your support now. ",
@@ -131,6 +132,7 @@ export const COLLECTIONS = {
     ],
   },
   smoothie: {
+    id: 'smoothie',
     image: "/images/smoothie/preview.png",
     title: "Ukrainian Fine Smoothie",
     desc: "Everyone from a high schooler to a grandma is training as a barista in Ukraine. Join Ukrainian mixology club and help local resistance units to stand by providing supplies of walkie-talkies, bullet-proof vests, night vision devices, and first aid kits. Artwork by Yarko Filevych (Lviv). The artist donates 95% of the proceeds to the cause.",

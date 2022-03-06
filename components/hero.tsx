@@ -29,15 +29,17 @@ const Hero = () => {
         direction="column"
         style={{ justifyContent: "space-around" }}
         mr={18}
-        height="400px"
       >
-        <Text fontSize="4xl" maxWidth="600px">
+        <Text fontSize={isMobile ? "2xl" : "4xl"} maxWidth="600px" mb="4">
           A series of Ukraine wartime art NFT collections
         </Text>
-        <Text fontSize="md" maxWidth="400px">
-          We aim to raise aid funds for Ukraine with a series of NFT collections
-          from a range of artists. Each collection has a unique story and cause.
-          Become a part of world history by supporting Ukraine in fending off
+        <Text fontSize="md" maxWidth="460px">
+          Our mission is to enable everyone to contribute to Ukrainian
+          humanitarian efforts and resistance movement through a series of NFT
+          collections. Our collections tell the story of Ukrainian people, who
+          suddenly had to drop everything to go defend their land or flee their
+          homes. Each collection has its unique story and cause. Become a part
+          of world history by supporting the people of Ukraine in fending off
           the aggression!
         </Text>
         <Button
@@ -54,7 +56,8 @@ const Hero = () => {
           backgroundColor={"brand.800"}
           color={"brand.100"}
           width="200px"
-          height="38px"
+          padding="2"
+          my="8"
           onClick={() => Router.push("/collection/creatures#mint")}
         >
           Go to Mint
@@ -62,21 +65,7 @@ const Hero = () => {
       </Flex>
       <Box>
         <Flex justify="center" align="center" height="100%">
-          {/* <svg 
-                        style={{ position: 'absolute' }}
-                        viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                        <path fill="#9D5C63" d="M53.5,-56.1C62.3,-44.7,57.6,-22.4,52.4,-5.2C47.1,11.9,41.5,23.9,32.7,33C23.9,42.1,11.9,48.3,-1.1,49.4C-14,50.4,-28.1,46.3,-43.3,37.2C-58.5,28.1,-74.9,14,-75.7,-0.8C-76.5,-15.6,-61.7,-31.2,-46.5,-42.6C-31.2,-54,-15.6,-61.1,3.4,-64.4C22.4,-67.8,44.7,-67.4,53.5,-56.1Z" transform="translate(100 100)" />
-                        </svg> */}
-          <Image
-            style={{
-              borderRadius: "18px",
-              margin: imgMargin,
-              width: imgDimension,
-            }}
-            width="400px"
-            src="images/childrens-art-1.jpeg"
-            objectFit="cover"
-          />
+          <Box width="400px"></Box>
         </Flex>
       </Box>
     </Flex>

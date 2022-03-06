@@ -1,4 +1,12 @@
-import { Box, Flex, Text, Image, Link, useMediaQuery } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Button,
+  Text,
+  Image,
+  Link,
+  useMediaQuery,
+} from "@chakra-ui/react";
 import { COLLECTIONS } from "../utils/collections";
 import { useState, useEffect } from "react";
 import Router from "next/router";
@@ -25,13 +33,13 @@ const Collections = () => {
         cursor="pointer"
         onClick={() => Router.push(c.link)}
       >
-          <Image
-            src={c.image}
-            width="280px"
-            objectFit="cover"
-            m={isMobile ? "20px auto" : 6}
-            borderRadius="12px"
-          />
+        <Image
+          src={c.image}
+          width="280px"
+          objectFit="cover"
+          m={isMobile ? "20px auto" : 6}
+          borderRadius="12px"
+        />
         <Flex direction="column">
           <Text fontSize="3xl" mb={2}>
             {c.title}
@@ -64,13 +72,35 @@ const Collections = () => {
           <Link mt={8} href={c.link}>
             Read More
           </Link>
+          {c.minting && (
+            <Button
+              style={{
+                fontFamily: "Exo",
+              }}
+              _hover={{
+                background: "brand.800",
+                color: "brand.100",
+              }}
+              borderRadius="8px"
+              size={"md"}
+              fontWeight={"normal"}
+              backgroundColor={"brand.800"}
+              color={"brand.100"}
+              width="200px"
+              padding="2"
+              my="8"
+              onClick={() => Router.push(`/collection/${c.id}#mint`)}
+            >
+              Go to Mint
+            </Button>
+          )}
         </Flex>
       </Flex>
     );
   };
   return (
     <Box my="40px" id="collections">
-      <Text fontSize={isMobile ? "4xl" : "6xl"} textAlign="center" mb="6">
+      <Text my={8} fontSize={isMobile ? "4xl" : "6xl"} textAlign="center" mb="6">
         Collections
       </Text>
       <Flex direction="column" align="center">
