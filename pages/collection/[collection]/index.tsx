@@ -1,8 +1,9 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
-import { Box, Input, Button, Text, Flex, Image } from "@chakra-ui/react";
+import { Box, Input, Button, Text, Flex, Image, Link } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { COLLECTIONS } from "../../../utils/collections";
+import Opensea from '../../../components/opensea';
 
 import { useWeb3React } from "@web3-react/core";
 import { ethers } from "ethers";
@@ -154,6 +155,7 @@ const Creatures: NextPage = () => {
             </Flex>
           )}
         <Flex direction="column" maxWidth="700px">
+            {col.openseaUrl && <Flex align="center" justify="center" m={4} ><Link href={col.openseaUrl} ><Opensea /></Link></Flex>}
           <Text fontSize="md" mb={2}>
             {col.desc}
           </Text>
