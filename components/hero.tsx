@@ -54,6 +54,7 @@ const Hero = () => {
           backgroundColor={"brand.800"}
           color={"brand.100"}
           width="200px"
+          height="38px"
           onClick={() => Router.push("/collection/creatures#mint")}
         >
           Go to Mint

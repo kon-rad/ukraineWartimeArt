@@ -132,7 +132,7 @@ export const COLLECTIONS = {
   smoothie: {
     image: "/images/smoothie/preview.png",
     title: "Ukrainian Fine Smoothie",
-    desc: "Everyone from a high schooler to a grandma is training as a barista in Ukraine. Join Ukrainian mixology club and help local resistance units to stand by providing supplies of walkie-talkies, bullet-proof vests, night vision devices, and first aid kits. Artwork by Yarko Filevych (Lviv). The artist donates 97% of the proceeds to the cause.",
+    desc: "Everyone from a high schooler to a grandma is training as a barista in Ukraine. Join Ukrainian mixology club and help local resistance units to stand by providing supplies of walkie-talkies, bullet-proof vests, night vision devices, and first aid kits. Artwork by Yarko Filevych (Lviv). The artist donates 95% of the proceeds to the cause.",
     launch: "Monday March 7th, 7PM PST",
     network: "Polygon",
     price: "20 MATIC",

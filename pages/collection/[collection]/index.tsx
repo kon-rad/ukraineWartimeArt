@@ -114,41 +114,9 @@ const Creatures: NextPage = () => {
           m={6}
           borderRadius="12px"
         />
-        <Flex direction="column" maxWidth="700px">
-          <Text fontSize="md" mb={2}>
-            {col.desc}
-          </Text>
-          <Text fontSize="md" mb={2}>
-            {col.longDescription}
-          </Text>
-          <Flex>
-            <Text fontSize="md" fontWeight="bold" mr="4">
-              Launch:
-            </Text>
-            <Text fontSize="md">{col.launch}</Text>
-          </Flex>
-          <Flex>
-            <Text fontSize="md" fontWeight="bold" mr="4">
-              Network:
-            </Text>
-            <Text fontSize="md">{col.network}</Text>
-          </Flex>
-          <Flex>
-            <Text fontSize="md" fontWeight="bold" mr="4">
-              Price:
-            </Text>
-            <Text fontSize="md">{col.price}</Text>
-          </Flex>
-          <Flex>
-            <Text fontSize="md" fontWeight="bold" mr="4">
-              Quantity:
-            </Text>
-            <Text fontSize="md">{col.quantity}</Text>
-          </Flex>
-          {col.descriptionElements &&
-            col.descriptionElements.map((e: any) => renderElem(e))}
-          {col.minting && (
-            <Flex id="mint" mt={12} direction="column">
+
+{col.minting && (
+            <Flex id="mint" my={12} direction="column">
               <Text textAlign="center" color={"brand.800"} fontSize="2xl">
                 Mint is Live
               </Text>
@@ -185,6 +153,39 @@ const Creatures: NextPage = () => {
               </Flex>
             </Flex>
           )}
+        <Flex direction="column" maxWidth="700px">
+          <Text fontSize="md" mb={2}>
+            {col.desc}
+          </Text>
+          <Text fontSize="md" mb={2}>
+            {col.longDescription}
+          </Text>
+          <Flex>
+            <Text fontSize="md" fontWeight="bold" mr="4">
+              Launch:
+            </Text>
+            <Text fontSize="md">{col.launch}</Text>
+          </Flex>
+          <Flex>
+            <Text fontSize="md" fontWeight="bold" mr="4">
+              Network:
+            </Text>
+            <Text fontSize="md">{col.network}</Text>
+          </Flex>
+          <Flex>
+            <Text fontSize="md" fontWeight="bold" mr="4">
+              Price:
+            </Text>
+            <Text fontSize="md">{col.price}</Text>
+          </Flex>
+          <Flex>
+            <Text fontSize="md" fontWeight="bold" mr="4">
+              Quantity:
+            </Text>
+            <Text fontSize="md">{col.quantity}</Text>
+          </Flex>
+          {col.descriptionElements &&
+            col.descriptionElements.map((e: any) => renderElem(e))}
         </Flex>
       </Flex>
     </Box>
