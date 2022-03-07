@@ -1,5 +1,4 @@
 import { Box, Text, Flex, Image } from "@chakra-ui/react";
-
 export const COLLECTIONS = {
   creatures: {
     id: 'creatures',
@@ -141,6 +140,14 @@ export const COLLECTIONS = {
     price: "20 MATIC",
     quantity: "5,000",
     link: "/collection/smoothie",
+  },
+  solomennykova: {
+    type: 'opensea',
+    id: 'solomennykova',
+    image: "/images/solomennykova.png",
+    title: "Art of Maryna Solomennykova",
+    desc: "Maryna <a target='_blank' rel='nofollow' href='https://instagram.com/marinoss_art' class='link'>@marinoss_art</a> is an artist based in Dnipro, Ukraine, working with Tubik Studio <a target='_blank' rel='nofollow' href='https://instagram.com/tubikstudio' class='link'>@tubikstudio</a>. Through her work of last weeks, which she’s been creating in-between air raid alarms, she aspires to share the truth about the war, these tragic and hard times that united people of Ukraine together. She wants to use her art to support our army and people in need morally and financially. The proceeds are distributed by the artist.",
+    openseaUrl: "https://opensea.io/collection/untitled-collection-263659418",
   }
   // defender: {
   //     image: "/images/defender/defender-compiled.png",

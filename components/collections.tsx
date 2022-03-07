@@ -9,7 +9,9 @@ import {
 } from "@chakra-ui/react";
 import { COLLECTIONS } from "../utils/collections";
 import { useState, useEffect } from "react";
+import { FaInstagram } from "react-icons/fa";
 import Router from "next/router";
+import Opensea from '../components/opensea';
 
 const Collections = () => {
   const [mediaQuery] = useMediaQuery("(max-width: 600px)");
@@ -22,6 +24,34 @@ const Collections = () => {
   }, [mediaQuery]);
 
   const renderCollection = (c: any) => {
+    if (c.type === 'opensea') {
+
+    return (
+      <Flex
+        maxWidth="700px"
+        direction={isMobile ? "column" : "row"}
+        backgroundColor="gray.900"
+        mb={8}
+        p={6}
+        borderRadius="12px"
+      >
+        <Image
+          src={c.image}
+          width="280px"
+          objectFit="cover"
+          m={isMobile ? "20px auto" : 6}
+          borderRadius="12px"
+        />
+        <Flex direction="column">
+          <Text fontSize="3xl" mb={2}>
+            {c.title}
+          </Text>
+          <div dangerouslySetInnerHTML={{ __html: c.desc }}></div>
+          <Flex align="center" justify="center" m={4} ><Link href={c.openseaUrl} ><Flex align="center"><Opensea /> <Text ml={2}>View On Opensea</Text></Flex></Link></Flex>
+        </Flex>
+      </Flex>
+    );
+    }
     return (
       <Flex
         maxWidth="700px"
