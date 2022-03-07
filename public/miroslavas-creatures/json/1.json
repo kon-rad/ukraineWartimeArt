@@ -6,7 +6,7 @@
         },
         {
             "trait_type": "hue",
-            "value": 7
+            "value": "7"
         },
         {
             "trait_type": "creature",
@@ -14,7 +14,7 @@
         },
         {
             "trait_type": "lowfi",
-            "value": false
+            "value": "false"
         }
     ],
     "compiler": "Ukraine Wartime Art Engine",
