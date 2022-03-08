@@ -150,9 +150,11 @@ export const COLLECTIONS = {
     address: process.env.NEXT_PUBLI_SMOOTHIE_ADDRESS,
     etherscanUrl: 'https://polygonscan.com/address/0xD5a2a73015aA155d77051F247d7d0322aaFDfc86',
     contractAddress: '0xD5a2a73015aA155d77051F247d7d0322aaFDfc86',
+    openseaUrl: 'https://opensea.io/collection/ukrainian-fine-smoothie',
   },
   solomennykova: {
     type: 'opensea',
+    network: 'Ethereum',
     id: 'solomennykova',
     idTag: 'Art_of_Maryna_Solomennykova',
     image: "/images/solomennykova.png",

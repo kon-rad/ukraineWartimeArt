@@ -150,8 +150,17 @@ const Creatures: NextPage = () => {
                   ? "* First 50 Mints for 5 MATIC *"
                   : `price ${MINT_PRICE} MATIC`}
               </Text>
-              <Text fontSize="xl" mt="6">Smart Contract Address: {col.contractAddress}</Text>
-              <Link href={col.etherscanUrl} target="_blank" rel="nofollow"><Text fontSize="xl" mt="6">View on Etherscan</Text></Link>
+              <Text fontSize="sm" mt="6">Smart Contract: {col.contractAddress}</Text>
+              <Link href={col.etherscanUrl} target="_blank" rel="nofollow"><Text fontSize="xl" mt="6">View on {col.network === 'Polygon' ? 'Polygonscan' : 'Etherscan'}</Text></Link>
+
+            {
+              col.openseaUrl && <Flex align="center" justify="center"  m={4} >
+                <Link href={col.openseaUrl} ><Opensea /></Link>
+              <Link ml={4} href={col.openseaUrl} target="_blank" rel="nofollow"><Text fontSize="xl" mt="6">View on Opensea</Text></Link>
+              </Flex>
+            }
+            
+            
               <Flex mt={"6"} justify="center">
                 <Input
                   mr={4}
@@ -181,7 +190,7 @@ const Creatures: NextPage = () => {
             </Flex>
           )}
         <Flex direction="column" maxWidth="700px">
-            {col.openseaUrl && <Flex align="center" justify="center" m={4} ><Link href={col.openseaUrl} ><Opensea /></Link></Flex>}
+
           <Text fontSize="md" mb={2}>
             {col.desc}
           </Text>
