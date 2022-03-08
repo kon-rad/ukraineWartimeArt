@@ -140,7 +140,7 @@ export const COLLECTIONS = {
     network: "Polygon",
     price: "12 MATIC",
     priceInt: 12,
-    quantity: "390",
+    quantity: "960",
     link: "/collection/smoothie",
     minting: true,
     address: process.env.NEXT_PUBLI_SMOOTHIE_ADDRESS,
