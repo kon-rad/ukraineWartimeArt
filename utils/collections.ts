@@ -2,6 +2,7 @@ import { Box, Text, Flex, Image } from "@chakra-ui/react";
 export const COLLECTIONS = {
   creatures: {
     id: 'creatures',
+    idTag: 'Miroslavas_Protector_Creatures',
     image: "/images/creatures/preview.gif",
     title: "Miroslava's Protector Creatures",
     desc: "The proceeds will go to Isida women's health clinic (95%) and to the artist (5%). Isida clinic provides free help to all women and it needs your support now. ",
@@ -133,6 +134,7 @@ export const COLLECTIONS = {
   },
   smoothie: {
     id: 'smoothie',
+    idTag: 'Ukrainian_Fine_Smoothie',
     image: "/images/smoothie/preview.png",
     title: "Ukrainian Fine Smoothie",
     desc: "Everyone from a high schooler to a grandma is training as a barista in Ukraine. Join Ukrainian mixology club and help local resistance units to stand by providing supplies of walkie-talkies, bullet-proof vests, night vision devices, and first aid kits. Artwork by Yarko Filevych (Lviv). The artist donates 95% of the proceeds to the cause.",
@@ -148,6 +150,7 @@ export const COLLECTIONS = {
   solomennykova: {
     type: 'opensea',
     id: 'solomennykova',
+    idTag: 'Art_of_Maryna_Solomennykova',
     image: "/images/solomennykova.png",
     title: "Art of Maryna Solomennykova",
     desc: "Maryna <a target='_blank' rel='nofollow' href='https://instagram.com/marinoss_art' class='link'>@marinoss_art</a> is an artist based in Dnipro, Ukraine, working with Tubik Studio <a target='_blank' rel='nofollow' href='https://instagram.com/tubikstudio' class='link'>@tubikstudio</a>. Through her work of last weeks, which she’s been creating in-between air raid alarms, she aspires to share the truth about the war, these tragic and hard times that united people of Ukraine together. She wants to use her art to support our army and people in need morally and financially. The proceeds are distributed by the artist.",

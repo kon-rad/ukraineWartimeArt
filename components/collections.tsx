@@ -34,6 +34,7 @@ const Collections = () => {
         mb={8}
         p={6}
         borderRadius="12px"
+        id={c.idTag}
       >
         <Image
           src={c.image}
@@ -62,6 +63,7 @@ const Collections = () => {
         borderRadius="12px"
         cursor="pointer"
         onClick={() => Router.push(c.link)}
+        id={c.idTag}
       >
         <Image
           src={c.image}

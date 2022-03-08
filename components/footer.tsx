@@ -11,8 +11,8 @@ import {
   useColorModeValue,
   HStack,
 } from "@chakra-ui/react";
-import { FaTwitter, FaInstagram } from "react-icons/fa";
-import { TWITTER_URL, INSTAGRAM_URL } from "../utils/constants";
+import { FaTwitter, FaInstagram, FaDiscord } from "react-icons/fa";
+import { TWITTER_URL, INSTAGRAM_URL, DISCORD_URL } from "../utils/constants";
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
   return (
@@ -73,6 +73,11 @@ export default function Footer() {
             <Link href={INSTAGRAM_URL} target="_blank">
               <HStack>
                 <FaInstagram style={{ color: "brand.800" }} />
+              </HStack>
+            </Link>
+            <Link href={DISCORD_URL} target="_blank">
+              <HStack>
+                <FaDiscord style={{ color: "brand.800" }} />
               </HStack>
             </Link>
 

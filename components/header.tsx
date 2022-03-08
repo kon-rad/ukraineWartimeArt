@@ -1,7 +1,7 @@
 import { Image, LinkBox, Spacer, useMediaQuery } from "@chakra-ui/react";
-import { FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaTwitter, FaInstagram, FaDiscord } from "react-icons/fa";
 import Wallet from "./wallet";
-import { TWITTER_URL, INSTAGRAM_URL } from "../utils/constants";
+import { TWITTER_URL, INSTAGRAM_URL, DISCORD_URL } from "../utils/constants";
 import {
   Box,
   Flex,
@@ -144,9 +144,14 @@ const DesktopNav = () => {
             <FaTwitter style={{ color: "brand.800" }} />
           </Flex>
         </Link>
-        <Link href={INSTAGRAM_URL} target="_blank">
+        <Link mr={4} href={INSTAGRAM_URL} target="_blank">
           <Flex height="100%" align="center" justify="center">
             <FaInstagram style={{ color: "brand.800" }} />
+          </Flex>
+        </Link>
+        <Link href={DISCORD_URL} target="_blank">
+          <Flex height="100%" align="center" justify="center">
+            <FaDiscord style={{ color: "brand.800" }} />
           </Flex>
         </Link>
       </Flex>
