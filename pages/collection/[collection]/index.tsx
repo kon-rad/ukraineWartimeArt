@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
-import { Box, Input, Button, Text, Flex, Image, Link } from "@chakra-ui/react";
+import { Box, Center, Input, Button, Text, Flex, Image, Link } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { COLLECTIONS } from "../../../utils/collections";
 import Opensea from '../../../components/opensea';
@@ -8,6 +8,7 @@ import Opensea from '../../../components/opensea';
 import { useWeb3React } from "@web3-react/core";
 import { ethers } from "ethers";
 import MiroslavasCreatures from "../../../artifacts/contracts/MiroslavasCreatures.sol/MiroslavasCreatures.json";
+import UkrainianSmoothie from "../../../artifacts/contracts/UkrainianSmoothie.sol/UkrainianSmoothie.json";
 import web3 from "web3";
 import { toast } from "react-toastify";
 import { miroslavasCreaturesAddress } from "../../../config";
@@ -16,6 +17,8 @@ const Creatures: NextPage = () => {
   const router = useRouter();
   const [col, setCol] = useState<any>();
   const [qty, setQty] = useState<number>(1);
+  const [abi, setAbi] = useState<any>();
+  const [address, setAddress] = useState<any>();
 
   const web3React = useWeb3React();
 
@@ -23,9 +26,26 @@ const Creatures: NextPage = () => {
   useEffect(() => {
     const collectionName = router.query.collection + "";
     setCol(COLLECTIONS[collectionName]);
+    console.log('collectionName: ', collectionName);
+    switch(collectionName) {
+      case 'smoothie':
+        setAbi(UkrainianSmoothie);
+        setAddress(process.env.NEXT_PUBLIC_SMOOTHIE_ADDRESS);
+        console.log('setting smoothie: ', process.env.NEXT_PUBLIC_SMOOTHIE_ADDRESS);
+        break;
+      case 'creatures':
+        console.log('setting creatures');
+        setAbi(MiroslavasCreatures);
+        setAddress(miroslavasCreaturesAddress);
+        break;
+    }
   }, [router.query.collection]);
-  const earlyMint = true;
-  const MINT_PRICE = earlyMint ? 5 : 150;
+
+  if (!col) {
+    return <Center><Text fontSize="2xl">loading</Text></Center>;
+  }
+  const earlyMint = col.id === 'creatures';
+  const MINT_PRICE = earlyMint ? 5 : col.priceInt;
 
   const handleMint = async () => {
     console.log("checkout ");
@@ -43,17 +63,25 @@ const Creatures: NextPage = () => {
       });
       return;
     }
+    console.log('minting: ', abi, address);
     try {
       const ethValue = web3.utils.toWei((qty * MINT_PRICE).toString(), "ether");
       const signer = provider.getSigner();
       const contract = new ethers.Contract(
-        miroslavasCreaturesAddress,
-        MiroslavasCreatures.abi,
+        address,
+        abi.abi,
         signer
       );
-      const transaction = await contract.mintCreature(qty, {
-        value: ethValue,
-      });
+      let transaction;
+      if (col.id === 'smoothie') {
+        transaction = await contract.mint(qty, {
+          value: ethValue,
+        });
+      } else {
+        transaction = await contract.mintCreature(qty, {
+          value: ethValue,
+        });
+      }
 
       const transData = await transaction.wait();
       toast(
@@ -82,10 +110,6 @@ const Creatures: NextPage = () => {
       return;
     }
   };
-
-  if (!col) {
-    return <Box>loading</Box>;
-  }
   const renderElem = (e: any) => {
     switch (e.type) {
       case "Text":
@@ -116,7 +140,7 @@ const Creatures: NextPage = () => {
           borderRadius="12px"
         />
 
-{col.minting && (
+        {col.minting && (
             <Flex id="mint" my={12} direction="column">
               <Text textAlign="center" color={"brand.800"} fontSize="2xl">
                 Mint is Live

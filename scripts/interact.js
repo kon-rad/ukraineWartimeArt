@@ -8,7 +8,7 @@ const contract = require("../artifacts/contracts/MiroslavasCreatures.sol/Mirosla
 
 // provider - Alchemy
 // const provider = new ethers.providers.alchemyProvider(network="localhost", API_KEY);
-const provider = new ethers.providers.JsonRpcProvider();
+const provider = new ethers.providers.JsonRpcProvider('http://localhost:8545');
 
 // signer - you
 const signer = new ethers.Wallet(PRIVATE_KEY, provider);

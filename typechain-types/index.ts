@@ -11,6 +11,7 @@ export type { IERC721Receiver } from "./IERC721Receiver";
 export type { ERC165 } from "./ERC165";
 export type { IERC165 } from "./IERC165";
 export type { MiroslavasCreatures } from "./MiroslavasCreatures";
+export type { UkrainianSmoothie } from "./UkrainianSmoothie";
 
 export { Ownable__factory } from "./factories/Ownable__factory";
 export { ERC721__factory } from "./factories/ERC721__factory";
@@ -22,3 +23,4 @@ export { IERC721Receiver__factory } from "./factories/IERC721Receiver__factory";
 export { ERC165__factory } from "./factories/ERC165__factory";
 export { IERC165__factory } from "./factories/IERC165__factory";
 export { MiroslavasCreatures__factory } from "./factories/MiroslavasCreatures__factory";
+export { UkrainianSmoothie__factory } from "./factories/UkrainianSmoothie__factory";
