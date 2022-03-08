@@ -21,7 +21,7 @@ const Creatures: NextPage = () => {
   const [address, setAddress] = useState<any>();
 
   const web3React = useWeb3React();
-
+  
   console.log(router.query);
   useEffect(() => {
     const collectionName = router.query.collection + "";
