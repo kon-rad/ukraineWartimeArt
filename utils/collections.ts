@@ -13,6 +13,8 @@ export const COLLECTIONS = {
     quantity: "2,500",
     link: "/collection/creatures",
     minting: true,
+    etherscanUrl: 'https://polygonscan.com/address/0xf562218356FA3f8A6630cc275a5e79B02Dc787AF',
+    contractAddress: '0xf562218356FA3f8A6630cc275a5e79B02Dc787AF',
     openseaUrl: 'https://opensea.io/collection/miroslavas-protector-creatures',
     longDescription:
       "Mira was born in 2011 in Donetsk, Ukraine. When the city was invaded and occupied by Russia sponsored separatists, her family had to flee. The art pieces presented here reflect a period of Mira's adaptation in her new environment as an internally displaced person. Recently, she and her mother had to flee the suburbs of Kyiv again to West Ukraine. Despite their disturbing appearance, all creatures Mira brings into existence are kind. According to her, these creatures are protectors who suffered while defending children. Their appearance is frightening, which makes it hard for them to find friends. Beings that Mira creates are reminiscent of Tibetan wrathful deities, powers that channel their anger to provide safety for those who are in danger. Join Mira's creatures in making this world safer for children and babies affected by the war. ",
@@ -146,6 +148,8 @@ export const COLLECTIONS = {
     link: "/collection/smoothie",
     minting: true,
     address: process.env.NEXT_PUBLI_SMOOTHIE_ADDRESS,
+    etherscanUrl: 'https://polygonscan.com/address/0xD5a2a73015aA155d77051F247d7d0322aaFDfc86',
+    contractAddress: '0xD5a2a73015aA155d77051F247d7d0322aaFDfc86',
   },
   solomennykova: {
     type: 'opensea',

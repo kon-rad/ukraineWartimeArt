@@ -21,7 +21,7 @@ const Creatures: NextPage = () => {
   const [address, setAddress] = useState<any>();
 
   const web3React = useWeb3React();
-  
+
   console.log(router.query);
   useEffect(() => {
     const collectionName = router.query.collection + "";
@@ -141,7 +141,7 @@ const Creatures: NextPage = () => {
         />
 
         {col.minting && (
-            <Flex id="mint" my={12} direction="column">
+            <Flex id="mint" my={12} direction="column" align="center">
               <Text textAlign="center" color={"brand.800"} fontSize="2xl">
                 Mint is Live
               </Text>
@@ -150,6 +150,8 @@ const Creatures: NextPage = () => {
                   ? "* First 50 Mints for 5 MATIC *"
                   : `price ${MINT_PRICE} MATIC`}
               </Text>
+              <Text fontSize="xl" mt="6">Smart Contract Address: {col.contractAddress}</Text>
+              <Link href={col.etherscanUrl} target="_blank" rel="nofollow"><Text fontSize="xl" mt="6">View on Etherscan</Text></Link>
               <Flex mt={"6"} justify="center">
                 <Input
                   mr={4}
