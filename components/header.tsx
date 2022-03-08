@@ -307,10 +307,6 @@ const NAV_ITEMS: Array<NavItem> = [
     label: "Team",
     href: "/#team",
   },
-  {
-    label: "Roadmap",
-    href: "/#roadmap",
-  },
 ];
 
 // const Header2 = () => {
