@@ -5,7 +5,7 @@ export const COLLECTIONS = {
     idTag: 'Miroslavas_Protector_Creatures',
     image: "/images/creatures/preview.gif",
     title: "Miroslava's Protector Creatures",
-    desc: "The proceeds will go to Isida women's health clinic (95%) and to the artist (5%). Isida clinic provides free help to all women and it needs your support now. ",
+    desc: "Despite their disturbing appearance, all creatures Mira brings into existence are kind. According to her, these creatures are protectors who suffered from violence while defending children. Host one of Mira’s creatures to make this world safer for mothers and their children affected by the war! The proceeds will go to Isida maternity clinic, Kyiv (95%) and to the artist (5%).",
     launch: "Friday March 4th, 7PM PST",
     network: "Polygon",
     price: "150 Matic",
@@ -132,6 +132,46 @@ export const COLLECTIONS = {
           textStyle: "italic",
         },
       },
+
+
+      {
+        type: "Text",
+        content: "Witty",
+        style: {
+          fontSize: "20px",
+          marginTop: "18px",
+          fontWeight: "bold",
+          textAlign: "center",
+        },
+      },
+      {
+        type: "Image",
+        src: "/miroslavas-creatures/images/138.png",
+        style: {
+          width: "220px",
+          marginTop: "8px",
+          margin: "8px auto ",
+          borderRadius: "12px",
+        },
+      },
+
+      {
+        type: "Text",
+        content:
+          "Witty is a fictional bomb-head character for the Friday Night Funkin' game. When she gets very angry, her head explodes and reappears again. She loves singing or rather rapping and that’s why she has a mic in her hand, and now she’s very angry as she is unable to do her favorite job. Witty is a schoolteacher who teaches kids to get angry when adults misbehave.",
+        style: {
+          marginTop: "8px",
+        },
+      },
+      {
+        type: "Text",
+        content:
+          "Віті це вигадана персанажка для гри Friday Night Funkin' вона бомбоговолова. Якщо її сильно розізлити то голова вибухне і одразу з'явиться знову. Віті дуже любить співати, точніше вона читає реп тому в руці у неї мікрофон. На малюнку вона роздратована, бо не може співати і займатися улюбленою справою, а це дуже дратує. Віті шкільна вчителька. вона вчить дітей і дуже злиться коли бачить що дорослі погано себе поводять.",
+        style: {
+          marginTop: "8px",
+          textStyle: "italic",
+        },
+      },
     ],
   },
   smoothie: {
@@ -161,6 +201,16 @@ export const COLLECTIONS = {
     title: "Art of Maryna Solomennykova",
     desc: "Maryna <a target='_blank' rel='nofollow' href='https://instagram.com/marinoss_art' class='link'>@marinoss_art</a> is an artist based in Dnipro, Ukraine, working with Tubik Studio <a target='_blank' rel='nofollow' href='https://instagram.com/tubikstudio' class='link'>@tubikstudio</a>. Through her work of last weeks, which she’s been creating in-between air raid alarms, she aspires to share the truth about the war, these tragic and hard times that united people of Ukraine together. She wants to use her art to support our army and people in need morally and financially. The proceeds are distributed by the artist.",
     openseaUrl: "https://opensea.io/collection/untitled-collection-263659418",
+  },
+  yarko: {
+    type: 'opensea',
+    network: 'Polygon',
+    id: 'yarko',
+    idTag: 'Comic_Strips_of_Yarko_Filevych',
+    image: "/images/yarko-collection.png",
+    title: "Comic strips of Yarko Filevych",
+    desc: "A pictorial story of Ukrainians’ fight for independence. Become part of the story by supporting the frontier of freedom! The proceeds will be channeled for support of Ukrainian community defense units by providing supplies of walkie-talkies, bullet-proof vests, night vision devices, and first aid kits. Artwork by Yarko Filevych (Lviv), Instagram: <a target='_blank' rel='nofollow' href='https://instagram.com/yarkofilevych' class='link'>@yarkofilevych</a>.",
+    openseaUrl: "https://opensea.io/collection/comics-from-the-war",
   }
   // defender: {
   //     image: "/images/defender/defender-compiled.png",
