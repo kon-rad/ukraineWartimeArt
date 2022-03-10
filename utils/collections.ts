@@ -1,5 +1,24 @@
 import { Box, Text, Flex, Image } from "@chakra-ui/react";
 export const COLLECTIONS = {
+  smoothie: {
+    id: 'smoothie',
+    idTag: 'Ukrainian_Fine_Smoothie',
+    image: "/images/smoothie/preview.png",
+    title: "Ukrainian Fine Smoothie",
+    desc: "Everyone from a high schooler to a grandma is training as a barista in Ukraine. Join Ukrainian mixology club and help local resistance units to stand by providing supplies of walkie-talkies, bullet-proof vests, night vision devices, and first aid kits. Artwork by Yarko Filevych (Lviv). The artist donates 95% of the proceeds to the cause.",
+    launch: "Monday March 7th, 7PM PST",
+    network: "Polygon",
+    price: "12 MATIC",
+    priceInt: 12,
+    quantity: "960",
+    link: "/collection/smoothie",
+    minting: true,
+    address: process.env.NEXT_PUBLI_SMOOTHIE_ADDRESS,
+    etherscanUrl: 'https://polygonscan.com/address/0xD5a2a73015aA155d77051F247d7d0322aaFDfc86',
+    contractAddress: '0xD5a2a73015aA155d77051F247d7d0322aaFDfc86',
+    openseaUrl: 'https://opensea.io/collection/ukrainian-fine-smoothie',
+  },
+
   creatures: {
     id: 'creatures',
     idTag: 'Miroslavas_Protector_Creatures',
@@ -174,24 +193,7 @@ export const COLLECTIONS = {
       },
     ],
   },
-  smoothie: {
-    id: 'smoothie',
-    idTag: 'Ukrainian_Fine_Smoothie',
-    image: "/images/smoothie/preview.png",
-    title: "Ukrainian Fine Smoothie",
-    desc: "Everyone from a high schooler to a grandma is training as a barista in Ukraine. Join Ukrainian mixology club and help local resistance units to stand by providing supplies of walkie-talkies, bullet-proof vests, night vision devices, and first aid kits. Artwork by Yarko Filevych (Lviv). The artist donates 95% of the proceeds to the cause.",
-    launch: "Monday March 7th, 7PM PST",
-    network: "Polygon",
-    price: "12 MATIC",
-    priceInt: 12,
-    quantity: "960",
-    link: "/collection/smoothie",
-    minting: true,
-    address: process.env.NEXT_PUBLI_SMOOTHIE_ADDRESS,
-    etherscanUrl: 'https://polygonscan.com/address/0xD5a2a73015aA155d77051F247d7d0322aaFDfc86',
-    contractAddress: '0xD5a2a73015aA155d77051F247d7d0322aaFDfc86',
-    openseaUrl: 'https://opensea.io/collection/ukrainian-fine-smoothie',
-  },
+  
   solomennykova: {
     type: 'opensea',
     network: 'Ethereum',
