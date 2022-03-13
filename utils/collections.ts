@@ -1,5 +1,15 @@
 import { Box, Text, Flex, Image } from "@chakra-ui/react";
 export const COLLECTIONS = {
+  ukrainewins: {
+    type: 'opensea',
+    network: 'Polygon',
+    id: 'ukrainewins',
+    idTag: 'Ukraine_Wins',
+    image: "/images/ukrainewins.png",
+    title: "Ukraine Wins!",
+    desc: "Join Lia (5) in helping Ukraine stand! Lia is staying in Kyiv with her parents as of early March 2022. Her paintings portray her trust in Ukraine's victory and mock the invaders. Post-processing and animation by Theor Ye <a target='_blank' rel='nofollow' href='https://instagram.com/theor_ye' class='link'>@theor_ye</a> and Maryam Tohidi <a target='_blank' rel='nofollow' href='https://instagram.com/photohidi' class='link'>@photohidi</a>. The proceedings go to support local defense units in Kyiv and Kyiv region with helmets, bullet proof vests, boots, and first aid kits.",
+    openseaUrl: "https://opensea.io/collection/ukraine-wins",
+  },
   smoothie: {
     id: 'smoothie',
     idTag: 'Ukrainian_Fine_Smoothie',
@@ -24,7 +34,7 @@ export const COLLECTIONS = {
     idTag: 'Miroslavas_Protector_Creatures',
     image: "/images/creatures/preview.gif",
     title: "Miroslava's Protector Creatures",
-    desc: "Despite their disturbing appearance, all creatures Mira brings into existence are kind. According to her, these creatures are protectors who suffered from violence while defending children. Host one of Mira’s creatures to make this world safer for mothers and their children affected by the war! The proceeds will go to Isida maternity clinic, Kyiv (95%) and to the artist (5%).",
+    desc: "Despite their disturbing appearance, all creatures Mira brings into existence are kind. According to her, these creatures are protectors who suffered from violence while defending children. Host one of Mira's creatures to make this world safer for mothers and their children affected by the war! The proceeds will go to Isida maternity clinic, Kyiv (95%) and to the artist (5%).",
     launch: "Friday March 4th, 7PM PST",
     network: "Polygon",
     price: "150 Matic",
@@ -106,7 +116,7 @@ export const COLLECTIONS = {
       {
         type: "Text",
         content:
-          "Кролік аніматронік Рунні, його призначенням було рятувати дітей від злих аніматроніків та поганих дорослих. Рунні вже багато багато років але він того не пам’ятає. Якось йому вирішили видалити око щоб поставити на його місце камеру. Люди думали, що так Рунні стане більш сильним та краще бачитиме, але він втік. Тепер  він злий і хоче помститися. Але Рунні все ще любить дітей і нікому не дасть їх образити.",
+          "Кролік аніматронік Рунні, його призначенням було рятувати дітей від злих аніматроніків та поганих дорослих. Рунні вже багато багато років але він того не пам'ятає. Якось йому вирішили видалити око щоб поставити на його місце камеру. Люди думали, що так Рунні стане більш сильним та краще бачитиме, але він втік. Тепер  він злий і хоче помститися. Але Рунні все ще любить дітей і нікому не дасть їх образити.",
 
         style: {
           marginTop: "8px",
@@ -177,7 +187,7 @@ export const COLLECTIONS = {
       {
         type: "Text",
         content:
-          "Witty is a fictional bomb-head character for the Friday Night Funkin' game. When she gets very angry, her head explodes and reappears again. She loves singing or rather rapping and that’s why she has a mic in her hand, and now she’s very angry as she is unable to do her favorite job. Witty is a schoolteacher who teaches kids to get angry when adults misbehave.",
+          "Witty is a fictional bomb-head character for the Friday Night Funkin' game. When she gets very angry, her head explodes and reappears again. She loves singing or rather rapping and that's why she has a mic in her hand, and now she's very angry as she is unable to do her favorite job. Witty is a schoolteacher who teaches kids to get angry when adults misbehave.",
         style: {
           marginTop: "8px",
         },
@@ -201,7 +211,7 @@ export const COLLECTIONS = {
     idTag: 'Art_of_Maryna_Solomennykova',
     image: "/images/solomennykova.png",
     title: "Art of Maryna Solomennykova",
-    desc: "Maryna <a target='_blank' rel='nofollow' href='https://instagram.com/marinoss_art' class='link'>@marinoss_art</a> is an artist based in Dnipro, Ukraine, working with Tubik Studio <a target='_blank' rel='nofollow' href='https://instagram.com/tubikstudio' class='link'>@tubikstudio</a>. Through her work of last weeks, which she’s been creating in-between air raid alarms, she aspires to share the truth about the war, these tragic and hard times that united people of Ukraine together. She wants to use her art to support our army and people in need morally and financially. The proceeds are distributed by the artist.",
+    desc: "Maryna <a target='_blank' rel='nofollow' href='https://instagram.com/marinoss_art' class='link'>@marinoss_art</a> is an artist based in Dnipro, Ukraine, working with Tubik Studio <a target='_blank' rel='nofollow' href='https://instagram.com/tubikstudio' class='link'>@tubikstudio</a>. Through her work of last weeks, which she's been creating in-between air raid alarms, she aspires to share the truth about the war, these tragic and hard times that united people of Ukraine together. She wants to use her art to support our army and people in need morally and financially. The proceeds are distributed by the artist.",
     openseaUrl: "https://opensea.io/collection/untitled-collection-263659418",
   },
   yarko: {
