@@ -51,11 +51,13 @@ const theme = extendTheme({
   colors: {
     gray: {
       700: "#1B1F3B",
-      800: "#040F0F",
+      // https://coolors.co/011638-364156-cdcdcd-dff8eb-214e34k
+      800: "#010b1b", // oxford blue variation
       900: "#0E1C36",
     },
     brand: {
-      100: "#202a25ff",
+      // https://coolors.co/011638-364156-cdcdcd-dff8eb-214e34k
+      100: "#010b1b", // oxford blue variation
       200: "#5f4bb6ff",
       300: "#86a5d9ff",
       400: "#26f0f1ff",

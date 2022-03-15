@@ -9,7 +9,7 @@ const TEAM = [
     {
         image: "/images/team/konrad-gnat.jpeg",
         title: "Konrad Gnat",
-        desc: "Blockchain and full-stack developer, currently based in San Francisco. He feels strongly it is his duty to do all that he can to protect the human rights and democratic freedom of Ukraine in this critical time.",
+        desc: "Blockchain and full-stack developer based in San Francisco. As a citizen of the world he feels strongly it is his duty to do all that he can to fight for the human rights and democratic freedom of Ukraine in this critical time.",
     },
     {
         image: "/images/team/maya-tohidi.jpeg",
